@@ -1,11 +1,12 @@
-import 'package:audio_tales/pages/other/profile_page.dart';
+import 'package:audio_tales/pages/content/test_page.dart';
 import 'package:audio_tales/resources/colors.dart';
+import 'package:audio_tales/routes/navigator_keys.dart';
 import 'package:audio_tales/widgets/lists/audio_list.dart';
 import 'package:audio_tales/widgets/stacks/categories_labels.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatelessWidget {
-  const MainPage({Key? key}) : super(key: key);
+  MainPage({Key? key}) : super(key: key);
 
   static const routeName = '/main_page';
 
@@ -18,7 +19,7 @@ class MainPage extends StatelessWidget {
           elevation: 0.0,
           leading: IconButton(
             onPressed: () {
-              return Scaffold.of(context).openDrawer();
+              NavigatorKeys.tabsPageKey.currentState!.openDrawer();
             },
             icon: Icon(Icons.menu),
             iconSize: 30,
@@ -65,8 +66,16 @@ class MainPage extends StatelessWidget {
                               padding: const EdgeInsets.only(top: 4.0),
                               child: TextButton(
                                 onPressed: () {
-                                  Navigator.pushNamed(
-                                      context, ProfilePage.routeName);
+                                  //tesstt!!!!!!
+                                  Navigator.push(
+                                    NavigatorKeys.mainKey.currentState!.context,
+                                    MaterialPageRoute(
+                                      builder: (context) {
+                                        return TestPage();
+                                      },
+                                    ),
+                                  );
+                                  //tessttt!!!!
                                 },
                                 child: Text(
                                   'Открыть все',

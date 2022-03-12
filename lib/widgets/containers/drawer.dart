@@ -1,6 +1,8 @@
+import 'package:audio_tales/pages/content/test_page.dart';
 import 'package:audio_tales/pages/other/tabs_page.dart';
 import 'package:audio_tales/resources/colors.dart';
 import 'package:audio_tales/resources/icons.dart';
+import 'package:audio_tales/routes/navigator_keys.dart';
 import 'package:audio_tales/widgets/containers/drawer_item.dart';
 import 'package:flutter/material.dart';
 
@@ -42,31 +44,87 @@ class CustomDrawer extends StatelessWidget {
                 child: Column(
                   children: [
                     DrawerItem(
-                        icon: AppIcons.home,
-                        pageName: 'Главная',
-                        onTap: () {
-                          Navigator.pushReplacementNamed(
-                              context, TabsPage.routeName);
-                        }),
+                      icon: AppIcons.home,
+                      pageName: 'Главная',
+                      onTap: () {
+                        Navigator.of(context).pop();
+                        Navigator.pushReplacement(
+                          context,
+                          PageRouteBuilder(
+                            pageBuilder: (context, _, __) => TabsPage(
+                              selectedPage: 0,
+                            ),
+                            transitionDuration: Duration.zero,
+                            reverseTransitionDuration: Duration.zero,
+                          ),
+                        );
+                      },
+                    ),
                     DrawerItem(
                       icon: AppIcons.profile,
                       pageName: 'Профиль',
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).pop();
+                        Navigator.pushReplacement(
+                          context,
+                          PageRouteBuilder(
+                            pageBuilder: (context, _, __) => TabsPage(
+                              selectedPage: 4,
+                            ),
+                            transitionDuration: Duration.zero,
+                            reverseTransitionDuration: Duration.zero,
+                          ),
+                        );
+                      },
                     ),
                     DrawerItem(
                       icon: AppIcons.category,
                       pageName: 'Подборки',
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).pop();
+                        Navigator.pushReplacement(
+                          context,
+                          PageRouteBuilder(
+                            pageBuilder: (context, _, __) => TabsPage(
+                              selectedPage: 1,
+                            ),
+                            transitionDuration: Duration.zero,
+                            reverseTransitionDuration: Duration.zero,
+                          ),
+                        );
+                      },
                     ),
                     DrawerItem(
                       icon: AppIcons.audio,
                       pageName: 'Все аудиофайлы',
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).pop();
+                        Navigator.pushReplacement(
+                          context,
+                          PageRouteBuilder(
+                            pageBuilder: (context, _, __) => TabsPage(
+                              selectedPage: 3,
+                            ),
+                            transitionDuration: Duration.zero,
+                            reverseTransitionDuration: Duration.zero,
+                          ),
+                        );
+                      },
                     ),
                     DrawerItem(
                       icon: AppIcons.search,
                       pageName: 'Поиск',
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).pop();
+                        Navigator.push(
+                          NavigatorKeys.mainKey.currentState!.context,
+                          PageRouteBuilder(
+                            pageBuilder: (context, _, __) => TestPage(),
+                            transitionDuration: Duration.zero,
+                            reverseTransitionDuration: Duration.zero,
+                          ),
+                        );
+                      },
                     ),
                     DrawerItem(
                       icon: AppIcons.deleted,

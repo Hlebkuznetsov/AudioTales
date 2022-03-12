@@ -1,16 +1,15 @@
-import 'package:audio_tales/pages/content/audio_page.dart';
-import 'package:audio_tales/pages/content/categories_page.dart';
-import 'package:audio_tales/pages/content/main_page.dart';
-import 'package:audio_tales/pages/other/profile_page.dart';
-import 'package:audio_tales/pages/other/record_page.dart';
+import 'package:audio_tales/pages/other/navigation_item_page.dart';
 import 'package:audio_tales/resources/colors.dart';
 import 'package:audio_tales/resources/icons.dart';
+import 'package:audio_tales/routes/navigator_keys.dart';
 import 'package:audio_tales/widgets/containers/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class TabsPage extends StatefulWidget {
-  TabsPage({Key? key}) : super(key: key);
+  TabsPage({Key? key, required this.selectedPage}) : super(key: key);
+
+  final int selectedPage;
 
   static const String routeName = '/tabs_page';
 
@@ -19,11 +18,18 @@ class TabsPage extends StatefulWidget {
 }
 
 class _TabsPageState extends State<TabsPage> {
+  @override
+  void initState() {
+    super.initState();
+    _currentIndex = widget.selectedPage;
+  }
+
   int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: NavigatorKeys.tabsPageKey,
       drawer: CustomDrawer(),
       extendBody: true,
       bottomNavigationBar: Container(
@@ -104,11 +110,11 @@ class _TabsPageState extends State<TabsPage> {
       body: IndexedStack(
         index: _currentIndex,
         children: [
-          MainPage(),
-          CategoriesPage(),
-          RecordPage(),
-          AudioPage(),
-          ProfilePage(),
+          NavigationItemPage(navigatorKey: NavigatorKeys.firstTabKey),
+          NavigationItemPage(navigatorKey: NavigatorKeys.secondTabKey),
+          NavigationItemPage(navigatorKey: NavigatorKeys.thirdTabKey),
+          NavigationItemPage(navigatorKey: NavigatorKeys.fourTabKey),
+          NavigationItemPage(navigatorKey: NavigatorKeys.fiveTabKey),
         ],
       ),
     );

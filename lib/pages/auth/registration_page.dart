@@ -1,9 +1,9 @@
 import 'package:audio_tales/pages/auth/finished_registration_page.dart';
 import 'package:audio_tales/pages/other/tabs_page.dart';
 import 'package:audio_tales/resources/colors.dart';
-import 'package:audio_tales/widgets/containers/curved_container.dart';
 import 'package:audio_tales/widgets/textfields/registration_textfield.dart';
 import 'package:flutter/material.dart';
+import 'package:audio_tales/widgets/containers/curved_container.dart';
 
 class RegistrationPage extends StatelessWidget {
   RegistrationPage({Key? key}) : super(key: key);
@@ -89,7 +89,7 @@ class RegistrationPage extends StatelessWidget {
                   //return this  route back !!!
                   // Navigator.of(context).pushNamedAndRemoveUntil(
                   //     MainPage.route, (Route<dynamic> route) => false);
-                  Navigator.pushNamed(context, TabsPage.routeName);
+                  Navigator.pushReplacementNamed(context, TabsPage.routeName);
                 },
                 child: Text(
                   'Позже',

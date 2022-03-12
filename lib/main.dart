@@ -1,5 +1,6 @@
 import 'package:audio_tales/pages/auth/new_user_page.dart';
 import 'package:audio_tales/resources/colors.dart';
+import 'package:audio_tales/routes/navigator_keys.dart';
 import 'package:audio_tales/routes/routes.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +18,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: NewUserPage.routeName,
       onGenerateRoute: AppRoutes.generateRoute,
+      debugShowCheckedModeBanner: false,
+      navigatorKey: NavigatorKeys.mainKey,
     );
   }
 }

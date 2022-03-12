@@ -1,10 +1,14 @@
+import 'package:audio_tales/pages/content/audio_page.dart';
+import 'package:audio_tales/pages/content/categories_page.dart';
 import 'package:audio_tales/pages/content/main_page.dart';
 import 'package:audio_tales/pages/auth/finished_registration_page.dart';
 import 'package:audio_tales/pages/auth/new_user_page.dart';
 import 'package:audio_tales/pages/auth/permanent_user_page.dart';
 import 'package:audio_tales/pages/auth/registration_page.dart';
 import 'package:audio_tales/pages/other/profile_page.dart';
+import 'package:audio_tales/pages/other/record_page.dart';
 import 'package:audio_tales/pages/other/tabs_page.dart';
+import 'package:audio_tales/routes/navigator_keys.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes {
@@ -17,7 +21,7 @@ class AppRoutes {
       case FinishedRegistrationPage.routeName:
         return MaterialPageRoute(builder: (_) => FinishedRegistrationPage());
       case TabsPage.routeName:
-        return MaterialPageRoute(builder: (_) => TabsPage());
+        return MaterialPageRoute(builder: (_) => TabsPage(selectedPage: 0));
       case ProfilePage.routeName:
         return MaterialPageRoute(builder: (_) => ProfilePage());
       case MainPage.routeName:
@@ -29,9 +33,30 @@ class AppRoutes {
         return MaterialPageRoute(
             builder: (_) => Scaffold(
                   body: Center(
-                    child: Text('${settings.name} route not found'),
+                    child: Text('${settings.name} Route not found'),
                   ),
                 ));
     }
+  }
+
+  static Widget generateTabRoute(navigatorKey) {
+    late Widget page;
+
+    if (navigatorKey == NavigatorKeys.firstTabKey) {
+      page = MainPage();
+    }
+    if (navigatorKey == NavigatorKeys.secondTabKey) {
+      page = CategoriesPage();
+    }
+    if (navigatorKey == NavigatorKeys.thirdTabKey) {
+      page = RecordPage();
+    }
+    if (navigatorKey == NavigatorKeys.fourTabKey) {
+      page = AudioPage();
+    }
+    if (navigatorKey == NavigatorKeys.fiveTabKey) {
+      page = ProfilePage();
+    }
+    return page;
   }
 }
