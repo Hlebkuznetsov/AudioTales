@@ -1,6 +1,5 @@
-import 'package:audio_tales/pages/content/test_page.dart';
 import 'package:audio_tales/resources/colors.dart';
-import 'package:audio_tales/routes/navigator_keys.dart';
+import 'package:audio_tales/widgets/buttons/drawer_button.dart';
 import 'package:audio_tales/widgets/lists/audio_list.dart';
 import 'package:audio_tales/widgets/stacks/categories_labels.dart';
 import 'package:flutter/material.dart';
@@ -17,13 +16,7 @@ class MainPage extends StatelessWidget {
           backgroundColor: AppColors.purple,
           bottomOpacity: 0.0,
           elevation: 0.0,
-          leading: IconButton(
-            onPressed: () {
-              NavigatorKeys.tabsPageKey.currentState!.openDrawer();
-            },
-            icon: Icon(Icons.menu),
-            iconSize: 30,
-          )),
+          leading: DrawerButton()),
       body: Column(
         children: [
           CategoriessLabels(),
@@ -65,18 +58,7 @@ class MainPage extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.only(top: 4.0),
                               child: TextButton(
-                                onPressed: () {
-                                  //tesstt!!!!!!
-                                  Navigator.push(
-                                    NavigatorKeys.mainKey.currentState!.context,
-                                    MaterialPageRoute(
-                                      builder: (context) {
-                                        return TestPage();
-                                      },
-                                    ),
-                                  );
-                                  //tessttt!!!!
-                                },
+                                onPressed: () {},
                                 child: Text(
                                   'Открыть все',
                                   style: TextStyle(
@@ -89,12 +71,14 @@ class MainPage extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Container(
-                        height: 240,
-                        child:
-                            // EmptyAudioInfo(),
-                            //switch between
-                            AudioList(),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 90),
+                          child:
+                              // EmptyAudioInfo(),
+                              //switch between
+                              AudioList(),
+                        ),
                       ),
                     ],
                   )),

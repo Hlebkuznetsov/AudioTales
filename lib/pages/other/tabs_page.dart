@@ -29,7 +29,7 @@ class _TabsPageState extends State<TabsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: NavigatorKeys.tabsPageKey,
+      key: NavigatorKeys.tabsScaffoldKey,
       drawer: CustomDrawer(),
       extendBody: true,
       bottomNavigationBar: Container(
@@ -63,7 +63,7 @@ class _TabsPageState extends State<TabsPage> {
                   AppIcons.home,
                   color: AppColors.purple,
                 ),
-                label: 'Главная ',
+                label: 'Главная',
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(AppIcons.category),

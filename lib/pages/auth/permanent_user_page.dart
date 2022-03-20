@@ -1,4 +1,5 @@
 import 'package:audio_tales/resources/colors.dart';
+import 'package:audio_tales/resources/images.dart';
 import 'package:audio_tales/widgets/stacks/memory_box_label.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -43,9 +44,7 @@ class PermanentUserPage extends StatelessWidget {
           SizedBox(
             height: 60,
           ),
-          SvgPicture.asset(
-            'assets/images/heart.svg',
-          ),
+          SvgPicture.asset(AppImages.heart),
           SizedBox(
             height: 110,
           ),

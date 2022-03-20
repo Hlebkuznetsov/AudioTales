@@ -2,8 +2,10 @@ import 'package:audio_tales/routes/routes.dart';
 import 'package:flutter/material.dart';
 
 class NavigationItemPage extends StatelessWidget {
-  const NavigationItemPage({Key? key, required this.navigatorKey})
-      : super(key: key);
+  const NavigationItemPage({
+    Key? key,
+    required this.navigatorKey,
+  }) : super(key: key);
 
   final GlobalKey<NavigatorState> navigatorKey;
 

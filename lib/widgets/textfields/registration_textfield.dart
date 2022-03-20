@@ -18,10 +18,12 @@ class _RegistrationTextFieldState extends State<RegistrationTextField> {
     return TextField(
       controller: _controller,
       onTap: () {
+        _controller.selection = TextSelection.fromPosition(
+            TextPosition(offset: _controller.text.length));
         _controller.text == '' ? _controller.text = '+380 (' : _controller.text;
       },
       textAlign: TextAlign.center,
-      showCursor: false,
+      showCursor: true,
       inputFormatters: [
         UAPhoneFormatter(),
         LengthLimitingTextInputFormatter(19),

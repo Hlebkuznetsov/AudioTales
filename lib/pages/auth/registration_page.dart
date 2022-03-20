@@ -86,10 +86,8 @@ class RegistrationPage extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  //return this  route back !!!
-                  // Navigator.of(context).pushNamedAndRemoveUntil(
-                  //     MainPage.route, (Route<dynamic> route) => false);
-                  Navigator.pushReplacementNamed(context, TabsPage.routeName);
+                  Navigator.of(context).pushNamedAndRemoveUntil(
+                      TabsPage.routeName, (Route<dynamic> route) => false);
                 },
                 child: Text(
                   'Позже',

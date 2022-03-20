@@ -1,4 +1,4 @@
-import 'package:audio_tales/pages/auth/new_user_page.dart';
+import 'package:audio_tales/pages/other/tabs_page.dart';
 import 'package:audio_tales/resources/colors.dart';
 import 'package:audio_tales/routes/navigator_keys.dart';
 import 'package:audio_tales/routes/routes.dart';
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: AppColors.background,
         fontFamily: 'TTNorms',
       ),
-      initialRoute: NewUserPage.routeName,
+      home: TabsPage(selectedPage: 0),
       onGenerateRoute: AppRoutes.generateRoute,
       debugShowCheckedModeBanner: false,
       navigatorKey: NavigatorKeys.mainKey,

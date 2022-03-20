@@ -1,4 +1,5 @@
 import 'package:audio_tales/resources/colors.dart';
+import 'package:audio_tales/resources/images.dart';
 import 'package:audio_tales/widgets/containers/curved_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -57,9 +58,7 @@ class FinishedRegistrationPage extends StatelessWidget {
           SizedBox(
             height: 60,
           ),
-          SvgPicture.asset(
-            'assets/images/heart.svg',
-          ),
+          SvgPicture.asset(AppImages.heart),
         ],
       ),
     );

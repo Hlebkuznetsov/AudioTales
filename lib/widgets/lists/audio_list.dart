@@ -1,4 +1,5 @@
 import 'package:audio_tales/resources/colors.dart';
+import 'package:audio_tales/resources/images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -31,7 +32,7 @@ class AudioList extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 5.0),
                     child: GestureDetector(
                       onTap: () {},
-                      child: SvgPicture.asset('assets/images/play.svg'),
+                      child: SvgPicture.asset(AppImages.play),
                     ),
                   ),
                   Padding(

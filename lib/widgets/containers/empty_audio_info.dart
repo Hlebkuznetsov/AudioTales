@@ -1,4 +1,5 @@
 import 'package:audio_tales/resources/colors.dart';
+import 'package:audio_tales/resources/images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -26,9 +27,7 @@ class EmptyAudioInfo extends StatelessWidget {
         SizedBox(
           height: 40,
         ),
-        SvgPicture.asset(
-          'assets/images/arrow_down.svg',
-        ),
+        SvgPicture.asset(AppImages.arrowDown),
       ],
     );
   }

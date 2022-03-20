@@ -12,4 +12,10 @@ class AppIcons {
   static const String search = 'assets/icons/search.svg';
   static const String subscription = 'assets/icons/subscription.svg';
   static const String support = 'assets/icons/support.svg';
+  static const String infinity = 'assets/icons/infinity.svg';
+  static const String download = 'assets/icons/download.svg';
+  static const String cloud = 'assets/icons/cloud.svg';
+  static const String drawer = 'assets/icons/drawer.svg';
+  static const String more = 'assets/icons/more.svg';
+  static const String delete = 'assets/icons/delete.svg';
 }

@@ -6,7 +6,9 @@ import 'package:audio_tales/pages/auth/new_user_page.dart';
 import 'package:audio_tales/pages/auth/permanent_user_page.dart';
 import 'package:audio_tales/pages/auth/registration_page.dart';
 import 'package:audio_tales/pages/other/profile_page.dart';
-import 'package:audio_tales/pages/other/record_page.dart';
+import 'package:audio_tales/pages/content/record_page.dart';
+import 'package:audio_tales/pages/other/search_page.dart';
+import 'package:audio_tales/pages/other/subscription_page.dart';
 import 'package:audio_tales/pages/other/tabs_page.dart';
 import 'package:audio_tales/routes/navigator_keys.dart';
 import 'package:flutter/material.dart';
@@ -24,6 +26,10 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => TabsPage(selectedPage: 0));
       case ProfilePage.routeName:
         return MaterialPageRoute(builder: (_) => ProfilePage());
+      case SubscriptionPage.routeName:
+        return MaterialPageRoute(builder: (_) => SubscriptionPage());
+      case SearchPage.routeName:
+        return MaterialPageRoute(builder: (_) => SearchPage());
       case MainPage.routeName:
         return MaterialPageRoute(builder: (_) => MainPage());
       case PermanentUserPage.routeName:
