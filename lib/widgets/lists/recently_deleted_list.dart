@@ -11,10 +11,12 @@ class RecentlyDeletedList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        padding: EdgeInsets.only(bottom: 20),
-        itemCount: 15,
-        itemBuilder: _buildDatedList);
+    return Expanded(
+      child: ListView.builder(
+          padding: EdgeInsets.only(bottom: 20),
+          itemCount: 15,
+          itemBuilder: _buildDatedList),
+    );
   }
 
   Widget _buildDatedList(context, index) {

@@ -1,7 +1,7 @@
-import 'package:audio_tales/pages/content/audio_page.dart';
-import 'package:audio_tales/pages/content/categories_page.dart';
+import 'package:audio_tales/pages/content/audio/audio_page.dart';
+import 'package:audio_tales/pages/content/categories/categories_page.dart';
 import 'package:audio_tales/pages/content/main_page.dart';
-import 'package:audio_tales/pages/content/recently_deleted_page.dart';
+import 'package:audio_tales/pages/content/audio/recently_deleted_page.dart';
 import 'package:audio_tales/pages/other/profile_page.dart';
 import 'package:audio_tales/pages/other/search_page.dart';
 import 'package:audio_tales/pages/other/subscription_page.dart';

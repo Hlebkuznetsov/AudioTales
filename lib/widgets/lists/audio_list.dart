@@ -6,7 +6,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 class AudioList extends StatelessWidget {
   const AudioList({
     Key? key,
+    required this.color,
   }) : super(key: key);
+
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +35,10 @@ class AudioList extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 5.0),
                     child: GestureDetector(
                       onTap: () {},
-                      child: SvgPicture.asset(AppImages.play),
+                      child: SvgPicture.asset(
+                        AppImages.play,
+                        color: color,
+                      ),
                     ),
                   ),
                   Padding(

@@ -77,7 +77,9 @@ class MainPage extends StatelessWidget {
                           child:
                               // EmptyAudioInfo(),
                               //switch between
-                              AudioList(),
+                              AudioList(
+                            color: AppColors.purple,
+                          ),
                         ),
                       ),
                     ],

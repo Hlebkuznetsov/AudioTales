@@ -5,6 +5,8 @@ import 'package:audio_tales/widgets/buttons/drawer_button.dart';
 import 'package:audio_tales/widgets/containers/avatar.dart';
 import 'package:audio_tales/widgets/containers/curved_container.dart';
 import 'package:audio_tales/widgets/textfields/profile_textfield.dart';
+import 'package:audio_tales/widgets/windows/delete_account_window.dart';
+import 'package:audio_tales/widgets/windows/logout_window.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -100,7 +102,7 @@ class ProfilePage extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: ((context) {
+              Navigator.push(context, MaterialPageRoute(builder: ((context) {
                 return SubscriptionPage();
               })));
             },
@@ -151,7 +153,11 @@ class ProfilePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  showDialog(
+                      context: context,
+                      builder: (BuildContext context) => LogoutWindow());
+                },
                 child: Text(
                   'Выйти из приложения',
                   style: TextStyle(
@@ -161,7 +167,11 @@ class ProfilePage extends StatelessWidget {
                 ),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  showDialog(
+                      context: context,
+                      builder: (BuildContext context) => DeleteAccountWindow());
+                },
                 child: Text(
                   'Удалить аккаунт',
                   style: TextStyle(

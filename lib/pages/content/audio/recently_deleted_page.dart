@@ -1,5 +1,5 @@
 import 'package:audio_tales/resources/colors.dart';
-import 'package:audio_tales/widgets/buttons/actions_button.dart';
+import 'package:audio_tales/widgets/buttons/recently_deleted_actions.dart';
 import 'package:audio_tales/widgets/buttons/drawer_button.dart';
 import 'package:audio_tales/widgets/containers/curved_container.dart';
 import 'package:audio_tales/widgets/lists/recently_deleted_list.dart';
@@ -13,9 +13,7 @@ class RecentlyDeletedPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           actions: [
-            ActionsButton(
-              color: AppColors.whiteText,
-            ),
+            RecentlyDeletedActionsButton(),
           ],
           title: Padding(
             padding: const EdgeInsets.only(top: 12.0),
@@ -55,11 +53,7 @@ class RecentlyDeletedPage extends StatelessWidget {
               )
             ],
           ),
-          Expanded(
-            child: Padding(
-                padding: const EdgeInsets.only(bottom: 90),
-                child: RecentlyDeletedList()),
-          ),
+          RecentlyDeletedList(),
         ],
       ),
     );

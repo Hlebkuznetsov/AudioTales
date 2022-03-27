@@ -10,4 +10,5 @@ class AppImages {
   static const String avatar = 'assets/images/avatar.svg';
   // delete this one after  firebase connection
   static const String profileDemo = 'assets/images/profile_image.png';
+  static const String backButton = 'assets/images/back_button.svg';
 }

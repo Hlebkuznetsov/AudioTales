@@ -15,6 +15,8 @@ class _NameTextFieldState extends State<NameTextField> {
   Widget build(BuildContext context) {
     return TextField(
       controller: _controller,
+      enableSuggestions: false,
+      autocorrect: false,
       keyboardType: TextInputType.name,
       onChanged: (nameValue) {},
       textAlign: TextAlign.center,

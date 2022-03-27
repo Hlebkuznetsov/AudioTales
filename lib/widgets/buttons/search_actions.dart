@@ -3,19 +3,16 @@ import 'package:audio_tales/resources/icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class ActionsButton extends StatelessWidget {
-  ActionsButton({
+class SearchActionsButton extends StatelessWidget {
+  SearchActionsButton({
     Key? key,
-    required this.color,
   }) : super(key: key);
-
-  final Color color;
 
 // list  of things  should be made in    block i suppose , so will need to  take  it  from  here
   final List<String> optionsList = [
-    'Выбрать несколько',
-    'Удалить все',
-    'Восстановить все',
+    'search actions',
+    'search actions',
+    'search actions',
   ];
 
   @override
@@ -32,7 +29,7 @@ class ActionsButton extends StatelessWidget {
         ),
         icon: SvgPicture.asset(
           AppIcons.more,
-          color: color,
+          color: AppColors.background,
         ),
         itemBuilder: (context) {
           return optionsList

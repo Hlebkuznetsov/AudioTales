@@ -18,4 +18,9 @@ class AppIcons {
   static const String drawer = 'assets/icons/drawer.svg';
   static const String more = 'assets/icons/more.svg';
   static const String delete = 'assets/icons/delete.svg';
+  static const String repeat = 'assets/icons/repeat.svg';
+  static const String upload = 'assets/icons/upload.svg';
+  static const String backRewind = 'assets/icons/back_rewind.svg';
+  static const String forwardRewind = 'assets/icons/forward_rewind.svg';
+  static const String arrowDown = 'assets/icons/arrow_down.svg';
 }

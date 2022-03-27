@@ -52,7 +52,9 @@ class _TabsPageState extends State<TabsPage> {
             currentIndex: _currentIndex,
             selectedFontSize: 12,
             unselectedFontSize: 12,
-            selectedItemColor: AppColors.purple,
+            selectedItemColor:
+                _currentIndex == 2 ? AppColors.orange : AppColors.purple,
+            unselectedItemColor: AppColors.blackText,
             type: BottomNavigationBarType.fixed,
             items: [
               BottomNavigationBarItem(
@@ -79,7 +81,6 @@ class _TabsPageState extends State<TabsPage> {
                 ),
                 activeIcon: SvgPicture.asset(
                   AppIcons.mic,
-                  color: AppColors.purple,
                 ),
                 label: 'Запись',
               ),

@@ -1,6 +1,6 @@
 import 'package:audio_tales/resources/colors.dart';
-import 'package:audio_tales/widgets/buttons/actions_button.dart';
 import 'package:audio_tales/widgets/buttons/drawer_button.dart';
+import 'package:audio_tales/widgets/buttons/search_actions.dart';
 import 'package:audio_tales/widgets/containers/curved_container.dart';
 import 'package:audio_tales/widgets/textfields/search_textfield.dart';
 
@@ -18,9 +18,7 @@ class SearchPage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
             actions: [
-              ActionsButton(
-                color: AppColors.whiteText,
-              ),
+              SearchActionsButton(),
             ],
             title: Padding(
               padding: const EdgeInsets.only(top: 12.0),
@@ -60,10 +58,7 @@ class SearchPage extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 67, left: 18, right: 18),
-                  child: Material(
-                      elevation: 8,
-                      borderRadius: BorderRadius.circular(30),
-                      child: SearchTextField()),
+                  child: SearchTextField(),
                 ),
               ],
             ),
@@ -73,8 +68,3 @@ class SearchPage extends StatelessWidget {
     );
   }
 }
-// child: Material(
-//                   elevation: 8,
-//                   borderRadius: BorderRadius.circular(30),
-//                   child: RegistrationTextField(),
-//                 ),
