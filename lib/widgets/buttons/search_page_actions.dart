@@ -3,15 +3,16 @@ import 'package:audio_tales/resources/icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class CategoryActionsButton extends StatelessWidget {
-  CategoryActionsButton({
+class SearchPageActions extends StatelessWidget {
+  SearchPageActions({
     Key? key,
   }) : super(key: key);
 
+// list  of things  should be made in    block i suppose , so will need to  take  it  from  here
   final List<String> optionsList = [
-    'category actions',
-    'category actions',
-    'category actions',
+    'search actions',
+    'search actions',
+    'search actions',
   ];
 
   @override
@@ -33,16 +34,11 @@ class CategoryActionsButton extends StatelessWidget {
         itemBuilder: (context) {
           return optionsList
               .map((option) => PopupMenuItem(
-                    padding: EdgeInsets.all(0),
-                    child: Container(
-                      width: 150,
-                      child: Center(
-                        child: Text(
-                          option,
-                          style: TextStyle(
-                              fontSize: 14, color: AppColors.blackText),
-                        ),
-                      ),
+                    padding: EdgeInsets.only(left: 15),
+                    child: Text(
+                      option,
+                      style:
+                          TextStyle(fontSize: 14, color: AppColors.blackText),
                     ),
                     value: option,
                   ))

@@ -3,8 +3,8 @@ import 'package:audio_tales/resources/icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class CategoriesActionsButton extends StatelessWidget {
-  CategoriesActionsButton({
+class CategoriesPageActions extends StatelessWidget {
+  CategoriesPageActions({
     Key? key,
   }) : super(key: key);
 

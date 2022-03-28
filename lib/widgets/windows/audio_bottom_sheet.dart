@@ -36,7 +36,7 @@ class AudioBottomSheet extends StatelessWidget {
                               Navigator.pop(context);
                             },
                             child: SvgPicture.asset(AppIcons.arrowDown)),
-                        AudioActionsButton()
+                        EditAudioActions()
                       ],
                     ),
                   ),

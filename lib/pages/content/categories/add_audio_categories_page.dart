@@ -1,7 +1,7 @@
 import 'package:audio_tales/resources/colors.dart';
 import 'package:audio_tales/resources/images.dart';
 import 'package:audio_tales/widgets/containers/curved_container.dart';
-import 'package:audio_tales/widgets/lists/categories_search_list.dart';
+import 'package:audio_tales/widgets/lists/checkbox_list.dart';
 import 'package:audio_tales/widgets/textfields/search_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';

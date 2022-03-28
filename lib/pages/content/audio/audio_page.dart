@@ -1,10 +1,10 @@
 import 'package:audio_tales/resources/colors.dart';
 import 'package:audio_tales/resources/icons.dart';
 import 'package:audio_tales/resources/images.dart';
-import 'package:audio_tales/widgets/buttons/audio_actions.dart';
+import 'package:audio_tales/widgets/buttons/audio_page_actions.dart';
 import 'package:audio_tales/widgets/buttons/drawer_button.dart';
 import 'package:audio_tales/widgets/containers/curved_container.dart';
-import 'package:audio_tales/widgets/lists/audio_list.dart';
+import 'package:audio_tales/widgets/lists/actions_audio_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -16,7 +16,7 @@ class AudioPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           actions: [
-            AudioActionsButton(),
+            AudioPageActions(),
           ],
           title: Padding(
             padding: const EdgeInsets.only(top: 12.0),
@@ -145,12 +145,7 @@ class AudioPage extends StatelessWidget {
               ),
             ],
           ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.only(bottom: 90),
-              child: AudioList(color: AppColors.darkBlue),
-            ),
-          ),
+          ActionsAudioList(color: AppColors.darkBlue),
         ],
       ),
     );

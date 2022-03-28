@@ -2,7 +2,7 @@ import 'package:audio_tales/pages/content/categories/category_page.dart';
 import 'package:audio_tales/pages/content/categories/new_category.dart';
 import 'package:audio_tales/resources/colors.dart';
 import 'package:audio_tales/routes/routes.dart';
-import 'package:audio_tales/widgets/buttons/categories_actions.dart';
+import 'package:audio_tales/widgets/buttons/categories_page_actions.dart';
 import 'package:audio_tales/widgets/containers/category_container.dart';
 import 'package:audio_tales/widgets/containers/curved_container.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +17,7 @@ class CategoriesPage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
             actions: [
-              CategoriesActionsButton(),
+              CategoriesPageActions(),
             ],
             title: Padding(
               padding: const EdgeInsets.only(top: 12.0),

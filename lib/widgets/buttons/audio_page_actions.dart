@@ -3,22 +3,22 @@ import 'package:audio_tales/resources/icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class RecentlyDeletedActionsButton extends StatelessWidget {
-  RecentlyDeletedActionsButton({
+class AudioPageActions extends StatelessWidget {
+  AudioPageActions({
     Key? key,
   }) : super(key: key);
 
 // list  of things  should be made in    block i suppose , so will need to  take  it  from  here
   final List<String> optionsList = [
-    'Выбрать несколько',
-    'Удалить все',
-    'Восстановить все',
+    'audio actions',
+    'audio actions',
+    'audio actions',
   ];
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 10, right: 10),
+      padding: const EdgeInsets.only(top: 100, right: 100),
       child: PopupMenuButton(
         offset: Offset(-10, 40),
         iconSize: 40,

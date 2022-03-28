@@ -3,27 +3,23 @@ import 'package:audio_tales/resources/icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class EditAudioActions extends StatelessWidget {
-  EditAudioActions({
+class AudioListActions extends StatelessWidget {
+  AudioListActions({
     Key? key,
   }) : super(key: key);
 
-// list  of things  should be made in    block i suppose , so will need to  take  it  from  here
   final List<String> optionsList = [
+    'Переименовать',
     'Добавить в подборку',
-    'Редактировать название',
-    'Поделиться',
-    'Скачать',
-    'Поделиться',
     'Удалить',
+    'Поделиться',
   ];
 
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton(
-      padding: EdgeInsets.zero,
       offset: Offset(-10, 40),
-      iconSize: 40,
+      iconSize: 15,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(
           Radius.circular(20.0),
@@ -31,12 +27,13 @@ class EditAudioActions extends StatelessWidget {
       ),
       icon: SvgPicture.asset(
         AppIcons.more,
+        width: 18,
         color: AppColors.blackText,
       ),
       itemBuilder: (context) {
         return optionsList
             .map((option) => PopupMenuItem(
-                  height: 40,
+                  padding: EdgeInsets.only(left: 15),
                   child: Text(
                     option,
                     style: TextStyle(fontSize: 14, color: AppColors.blackText),

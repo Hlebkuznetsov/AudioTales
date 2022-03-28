@@ -1,6 +1,6 @@
 import 'package:audio_tales/resources/colors.dart';
 import 'package:audio_tales/widgets/buttons/drawer_button.dart';
-import 'package:audio_tales/widgets/buttons/search_actions.dart';
+import 'package:audio_tales/widgets/buttons/search_page_actions.dart';
 import 'package:audio_tales/widgets/containers/curved_container.dart';
 import 'package:audio_tales/widgets/textfields/search_textfield.dart';
 
@@ -18,7 +18,7 @@ class SearchPage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
             actions: [
-              SearchActionsButton(),
+              SearchPageActions(),
             ],
             title: Padding(
               padding: const EdgeInsets.only(top: 12.0),

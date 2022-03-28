@@ -3,16 +3,16 @@ import 'package:audio_tales/resources/icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class AudioActionsButton extends StatelessWidget {
-  AudioActionsButton({
+class CategoryPageActions extends StatelessWidget {
+  CategoryPageActions({
     Key? key,
   }) : super(key: key);
 
-// list  of things  should be made in    block i suppose , so will need to  take  it  from  here
   final List<String> optionsList = [
-    'audio actions',
-    'audio actions',
-    'audio actions',
+    'Редактировать',
+    'Выбрать несколько',
+    'Удалить подборку',
+    'Поделиться',
   ];
 
   @override
@@ -34,11 +34,14 @@ class AudioActionsButton extends StatelessWidget {
         itemBuilder: (context) {
           return optionsList
               .map((option) => PopupMenuItem(
-                    padding: EdgeInsets.only(left: 15),
-                    child: Text(
-                      option,
-                      style:
-                          TextStyle(fontSize: 14, color: AppColors.blackText),
+                    padding: EdgeInsets.all(0),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Text(
+                        option,
+                        style:
+                            TextStyle(fontSize: 14, color: AppColors.blackText),
+                      ),
                     ),
                     value: option,
                   ))

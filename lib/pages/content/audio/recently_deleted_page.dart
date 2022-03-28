@@ -1,8 +1,8 @@
 import 'package:audio_tales/resources/colors.dart';
-import 'package:audio_tales/widgets/buttons/recently_deleted_actions.dart';
+import 'package:audio_tales/widgets/buttons/recently_deleted_page_actions.dart';
 import 'package:audio_tales/widgets/buttons/drawer_button.dart';
 import 'package:audio_tales/widgets/containers/curved_container.dart';
-import 'package:audio_tales/widgets/lists/recently_deleted_list.dart';
+import 'package:audio_tales/widgets/lists/deleted_list.dart';
 import 'package:flutter/material.dart';
 
 class RecentlyDeletedPage extends StatelessWidget {
@@ -13,7 +13,7 @@ class RecentlyDeletedPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           actions: [
-            RecentlyDeletedActionsButton(),
+            RecentlyDeletedPageActions(),
           ],
           title: Padding(
             padding: const EdgeInsets.only(top: 12.0),
@@ -53,7 +53,7 @@ class RecentlyDeletedPage extends StatelessWidget {
               )
             ],
           ),
-          RecentlyDeletedList(),
+          DeletedList(),
         ],
       ),
     );
