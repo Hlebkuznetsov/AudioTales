@@ -2,7 +2,7 @@ import 'package:audio_tales/resources/colors.dart';
 import 'package:audio_tales/widgets/buttons/recently_deleted_page_actions.dart';
 import 'package:audio_tales/widgets/buttons/drawer_button.dart';
 import 'package:audio_tales/widgets/containers/curved_container.dart';
-import 'package:audio_tales/widgets/lists/deleted_list.dart';
+import 'package:audio_tales/widgets/lists/deleted_audio_list.dart';
 import 'package:flutter/material.dart';
 
 class RecentlyDeletedPage extends StatelessWidget {

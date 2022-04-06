@@ -37,7 +37,6 @@ class _DescriptionTextFieldState extends State<DescriptionTextField> {
                 borderSide:
                     BorderSide(color: AppColors.blackText.withOpacity(0.2)),
               ),
-              // hintText: '',
               hintStyle: TextStyle(color: AppColors.blackText),
               contentPadding: EdgeInsets.symmetric(horizontal: 20)),
           keyboardAppearance: Brightness.dark,

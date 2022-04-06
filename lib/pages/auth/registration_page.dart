@@ -1,14 +1,14 @@
-import 'package:audio_tales/pages/auth/finished_registration_page.dart';
 import 'package:audio_tales/pages/other/tabs_page.dart';
 import 'package:audio_tales/resources/colors.dart';
 import 'package:audio_tales/widgets/textfields/registration_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:audio_tales/widgets/containers/curved_container.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class RegistrationPage extends StatelessWidget {
   RegistrationPage({Key? key}) : super(key: key);
 
-  static const routeName = '/registration_page';
+  static const routeName = '/auth/registration_page';
 
   @override
   Widget build(BuildContext context) {
@@ -64,8 +64,10 @@ class RegistrationPage extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(
-                      context, FinishedRegistrationPage.routeName);
+                  final users = FirebaseFirestore.instance.collection('users');
+
+                  // Navigator.pushNamed(
+                  //     context, FinishedRegistrationPage.routeName);
                 },
                 child: Text(
                   'Продолжить',

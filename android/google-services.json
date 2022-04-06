@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "917832453746",
+    "project_id": "audio-tales",
+    "storage_bucket": "audio-tales.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917832453746:android:0c32fb60459a7f9c5e7ceb",
+        "android_client_info": {
+          "package_name": "com.example.test_app3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917832453746-sdl77okr43shc0qlr1sdhibplbqtgjji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI8UyhlxF5VA2WNDg4EK1AqHZpY4gLoqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917832453746-sdl77okr43shc0qlr1sdhibplbqtgjji.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

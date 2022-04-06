@@ -11,7 +11,7 @@ class TabsPage extends StatefulWidget {
 
   final int selectedPage;
 
-  static const String routeName = '/tabs_page';
+  static const String routeName = '/other/tabs_page';
 
   @override
   _TabsPageState createState() => _TabsPageState();

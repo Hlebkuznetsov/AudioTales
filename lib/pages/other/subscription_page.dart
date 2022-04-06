@@ -9,7 +9,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 class SubscriptionPage extends StatefulWidget {
   const SubscriptionPage({Key? key}) : super(key: key);
 
-  static const routeName = '/subscription_page';
+  static const routeName = '/other/subscription_page';
 
   static final boxDecoration = BoxDecoration(
     boxShadow: [
@@ -49,7 +49,6 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
         backgroundColor: AppColors.purple,
         bottomOpacity: 0.0,
         elevation: 0.0,
-        // leading: DrawerButton(),
       ),
       body: Stack(
         children: [
@@ -84,7 +83,7 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                     child: Column(
                       children: [
                         SizedBox(
-                          height: 30,
+                          height: 20,
                         ),
                         Text(
                           'Выбери подписку',
@@ -95,7 +94,7 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
                               color: AppColors.blackText),
                         ),
                         SizedBox(
-                          height: 30,
+                          height: 20,
                         ),
                         Row(
                           children: [

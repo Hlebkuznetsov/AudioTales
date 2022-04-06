@@ -7,7 +7,7 @@ import 'package:flutter_svg/svg.dart';
 class PermanentUserPage extends StatelessWidget {
   const PermanentUserPage({Key? key}) : super(key: key);
 
-  static const routeName = '/permanent_user_page';
+  static const routeName = '/auth/permanent_user_page';
 
   @override
   Widget build(BuildContext context) {

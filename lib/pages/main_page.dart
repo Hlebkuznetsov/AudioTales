@@ -17,14 +17,14 @@ class MainPage extends StatelessWidget {
           bottomOpacity: 0.0,
           elevation: 0.0,
           leading: DrawerButton()),
-      body: Column(
-        children: [
-          CategoriessLabels(),
-          SizedBox(
-            height: 40,
-          ),
-          Expanded(
-            child: Padding(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            CategoriessLabels(),
+            SizedBox(
+              height: 40,
+            ),
+            Padding(
               padding: const EdgeInsets.symmetric(horizontal: 5),
               child: Container(
                 decoration: BoxDecoration(
@@ -43,7 +43,7 @@ class MainPage extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 15.0, vertical: 10),
+                          horizontal: 16, vertical: 10),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -71,15 +71,15 @@ class MainPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    ActionsAudioList(
-                      color: AppColors.purple,
-                    ),
+                    Container(
+                        height: 300,
+                        child: ActionsAudioList(color: AppColors.purple)),
                   ],
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -1,4 +1,4 @@
-import 'package:audio_tales/pages/content/categories/add_audio_categories_page.dart';
+import 'package:audio_tales/pages/categories/add_audio_categories_page.dart';
 import 'package:audio_tales/resources/colors.dart';
 import 'package:audio_tales/resources/images.dart';
 import 'package:audio_tales/routes/routes.dart';
@@ -11,7 +11,7 @@ import 'package:flutter_svg/svg.dart';
 class NewCategoryPage extends StatelessWidget {
   const NewCategoryPage({Key? key}) : super(key: key);
 
-  static const routeName = '/new_category_page';
+  static const routeName = '/categories/new_category_page';
 
   @override
   Widget build(BuildContext context) {

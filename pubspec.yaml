@@ -32,22 +32,23 @@ dependencies:
     sdk: flutter
   flutter_svg: ^1.0.3
   getwidget: ^2.0.5
-
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+  bloc: ^8.0.3
+  equatable: ^2.0.3
   cupertino_icons: ^1.0.2
+  cloud_firestore: ^3.1.11
+  firebase_auth: ^3.3.12
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^1.0.0
+  # flutter_lints: ^1.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -82,7 +83,6 @@ flutter:
       fonts:
         - asset: assets/fonts/TTNorms-Light.ttf 
         - asset: assets/fonts/TTNorms-Regular.ttf
-        - asset: assets/fonts/TTNorms-BoldItalic.ttf    
         - asset: assets/fonts/TTNorms-Medium.ttf         
         - asset: assets/fonts/TTNorms-Thin.ttf
   

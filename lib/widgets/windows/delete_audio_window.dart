@@ -1,4 +1,6 @@
 import 'package:audio_tales/resources/colors.dart';
+import 'package:audio_tales/routes/navigator_keys.dart';
+import 'package:audio_tales/widgets/windows/done_window.dart';
 import 'package:flutter/material.dart';
 
 class DeleteAudioWindow extends StatelessWidget {
@@ -36,7 +38,21 @@ class DeleteAudioWindow extends StatelessWidget {
                 height: 38,
                 child: Center(
                   child: GestureDetector(
-                    onTap: () {},
+                    // this  logic to make on  bloc
+                    // this  logic to make on  bloc
+                    // this  logic to make on  bloc
+                    // this  logic to make on  bloc
+                    // this  logic to make on  bloc
+                    onTap: () async {
+                      Navigator.of(context).pop();
+
+                      await Future.delayed(
+                        Duration(seconds: 2),
+                      ).then((value) => showDialog(
+                          context:
+                              NavigatorKeys.firstTabKey.currentState!.context,
+                          builder: (BuildContext context) => DoneWindow()));
+                    },
                     child: Text(
                       'Да',
                       style: TextStyle(

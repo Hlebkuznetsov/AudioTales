@@ -1,5 +1,6 @@
 import 'package:audio_tales/resources/colors.dart';
 import 'package:audio_tales/resources/icons.dart';
+import 'package:audio_tales/widgets/windows/delete_audio_window.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -43,7 +44,11 @@ class AudioListActions extends StatelessWidget {
             .toList();
       },
       onSelected: (value) {
-        print(value);
+        if (value == optionsList[2]) {
+          showDialog(
+              context: context,
+              builder: (BuildContext context) => DeleteAudioWindow());
+        }
       },
     );
   }

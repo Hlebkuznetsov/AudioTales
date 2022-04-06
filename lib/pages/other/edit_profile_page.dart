@@ -10,7 +10,7 @@ import 'package:flutter_svg/svg.dart';
 class EditProfilePage extends StatelessWidget {
   EditProfilePage({Key? key}) : super(key: key);
 
-  static const routeName = '/edit_profile_page';
+  static const routeName = '/other/edit_profile_page';
 
   @override
   Widget build(BuildContext context) {

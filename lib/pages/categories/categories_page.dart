@@ -1,5 +1,5 @@
-import 'package:audio_tales/pages/content/categories/category_page.dart';
-import 'package:audio_tales/pages/content/categories/new_category.dart';
+import 'package:audio_tales/pages/categories/category_page.dart';
+import 'package:audio_tales/pages/categories/new_category.dart';
 import 'package:audio_tales/resources/colors.dart';
 import 'package:audio_tales/routes/routes.dart';
 import 'package:audio_tales/widgets/buttons/categories_page_actions.dart';
@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 class CategoriesPage extends StatelessWidget {
   CategoriesPage({Key? key}) : super(key: key);
 
-  static const routeName = '/categories_page';
+  static const routeName = '/categories/categories_page';
 
   @override
   Widget build(BuildContext context) {

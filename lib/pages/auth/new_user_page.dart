@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class NewUserPage extends StatelessWidget {
   const NewUserPage({Key? key}) : super(key: key);
 
-  static const routeName = '/new_user_page';
+  static const routeName = '/auth/new_user_page';
 
   @override
   Widget build(BuildContext context) {

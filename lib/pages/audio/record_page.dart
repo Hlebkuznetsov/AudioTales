@@ -1,7 +1,7 @@
 import 'package:audio_tales/resources/colors.dart';
 import 'package:audio_tales/resources/icons.dart';
 import 'package:audio_tales/widgets/buttons/drawer_button.dart';
-import 'package:audio_tales/pages/content/audio/recording_page.dart';
+import 'package:audio_tales/pages/audio/recording_page.dart';
 import 'package:audio_tales/widgets/containers/curved_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -9,7 +9,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 class RecordPage extends StatelessWidget {
   RecordPage({Key? key}) : super(key: key);
 
-  static const routeName = '/record_page';
+  static const routeName = '/audio/record_page';
 
   @override
   Widget build(BuildContext context) {

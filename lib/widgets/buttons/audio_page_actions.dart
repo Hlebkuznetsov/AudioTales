@@ -18,7 +18,7 @@ class AudioPageActions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 100, right: 100),
+      padding: const EdgeInsets.only(top: 10, right: 10),
       child: PopupMenuButton(
         offset: Offset(-10, 40),
         iconSize: 40,

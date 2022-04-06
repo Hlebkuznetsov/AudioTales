@@ -1,5 +1,7 @@
+import 'package:audio_tales/pages/categories/edit_category_page.dart';
 import 'package:audio_tales/resources/colors.dart';
 import 'package:audio_tales/resources/icons.dart';
+import 'package:audio_tales/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -48,7 +50,12 @@ class CategoryPageActions extends StatelessWidget {
               .toList();
         },
         onSelected: (value) {
-          print(value);
+          if (value == 'Редактировать') {
+            Navigator.push(
+                context,
+                AppRoutes.generateRoute(
+                    RouteSettings(name: EditCategoryPage.routeName)));
+          }
         },
       ),
     );

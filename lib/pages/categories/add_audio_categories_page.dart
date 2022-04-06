@@ -1,7 +1,7 @@
 import 'package:audio_tales/resources/colors.dart';
 import 'package:audio_tales/resources/images.dart';
 import 'package:audio_tales/widgets/containers/curved_container.dart';
-import 'package:audio_tales/widgets/lists/checkbox_list.dart';
+import 'package:audio_tales/widgets/lists/checkbox_audio_list.dart';
 import 'package:audio_tales/widgets/textfields/search_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -9,7 +9,7 @@ import 'package:flutter_svg/svg.dart';
 class AddAudioCategoiesPage extends StatelessWidget {
   const AddAudioCategoiesPage({Key? key}) : super(key: key);
 
-  static const routeName = '/add_audio_categories_page';
+  static const routeName = '/categories/add_audio_categories_page';
 
   @override
   Widget build(BuildContext context) {

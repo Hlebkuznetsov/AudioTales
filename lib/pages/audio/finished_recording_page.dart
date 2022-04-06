@@ -11,7 +11,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 class FinishedRecordingPage extends StatelessWidget {
   const FinishedRecordingPage({Key? key}) : super(key: key);
 
-  static const routeName = '/finished_recording_page';
+  static const routeName = '/audio/finished_recording_page';
 
   @override
   Widget build(BuildContext context) {

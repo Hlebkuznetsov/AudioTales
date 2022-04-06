@@ -1,7 +1,7 @@
 import 'package:audio_tales/resources/colors.dart';
 import 'package:audio_tales/resources/icons.dart';
 import 'package:audio_tales/widgets/buttons/drawer_button.dart';
-import 'package:audio_tales/pages/content/audio/finished_recording_page.dart';
+import 'package:audio_tales/pages/audio/finished_recording_page.dart';
 import 'package:audio_tales/widgets/containers/curved_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -112,9 +112,6 @@ class RecordingPage extends StatelessWidget {
                               reverseTransitionDuration: Duration.zero,
                             ),
                           );
-
-                          // Navigator.pushNamed(
-                          //     context, FinishedRecordingPage.routeName);
                         },
                         child: SvgPicture.asset(AppIcons.recording)),
                   ],

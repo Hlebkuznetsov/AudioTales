@@ -23,4 +23,5 @@ class AppIcons {
   static const String backRewind = 'assets/icons/back_rewind.svg';
   static const String forwardRewind = 'assets/icons/forward_rewind.svg';
   static const String arrowDown = 'assets/icons/arrow_down.svg';
+  static const String done = 'assets/icons/done.svg';
 }

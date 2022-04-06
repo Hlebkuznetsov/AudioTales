@@ -7,7 +7,7 @@ import 'package:flutter_svg/svg.dart';
 class FinishedRegistrationPage extends StatelessWidget {
   const FinishedRegistrationPage({Key? key}) : super(key: key);
 
-  static const routeName = '/finished_registration_page';
+  static const routeName = '/auth/finished_registration_page';
 
   @override
   Widget build(BuildContext context) {
