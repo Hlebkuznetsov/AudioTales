@@ -1,8 +1,9 @@
 import 'package:audio_tales/resources/colors.dart';
+import 'package:audio_tales/resources/images.dart';
 import 'package:audio_tales/widgets/buttons/drawer_button.dart';
-import 'package:audio_tales/widgets/lists/actions_audio_list.dart';
 import 'package:audio_tales/widgets/stacks/categories_labels.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class MainPage extends StatelessWidget {
   MainPage({Key? key}) : super(key: key);
@@ -72,8 +73,30 @@ class MainPage extends StatelessWidget {
                       ),
                     ),
                     Container(
-                        height: 300,
-                        child: ActionsAudioList(color: AppColors.purple)),
+                      height: 300,
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 30,
+                          ),
+                          Text(
+                            'Как только ты запишешь\n аудио, она появится здесь.',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: AppColors.blackText.withOpacity(0.5),
+                            ),
+                          ),
+                          SizedBox(height: 40),
+                          SvgPicture.asset(
+                            AppImages.arrowDown,
+                            height: 45,
+                          ),
+                        ],
+                      ),
+                      //  or this  one
+                      // ActionsAudioList(color: AppColors.purple)
+                    ),
                   ],
                 ),
               ),

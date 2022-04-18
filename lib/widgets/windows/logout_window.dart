@@ -1,3 +1,4 @@
+import 'package:audio_tales/repositories/auth_repository.dart';
 import 'package:audio_tales/resources/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -30,7 +31,9 @@ class LogoutWindow extends StatelessWidget {
                 height: 38,
                 child: Center(
                   child: GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      AuthRepository().signOut(context);
+                    },
                     child: Text(
                       'Да',
                       style: TextStyle(
@@ -52,7 +55,9 @@ class LogoutWindow extends StatelessWidget {
                 height: 38,
                 child: Center(
                   child: GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).pop();
+                    },
                     child: Text(
                       'Нет',
                       style: TextStyle(

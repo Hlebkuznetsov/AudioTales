@@ -1,38 +1,31 @@
 import 'package:audio_tales/blocs/registration/registration_bloc.dart';
 import 'package:audio_tales/resources/colors.dart';
-import 'package:audio_tales/services/formatters/phone_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class RegistrationTextField extends StatefulWidget {
-  RegistrationTextField({Key? key}) : super(key: key);
+class OTPTextField extends StatefulWidget {
+  OTPTextField({Key? key}) : super(key: key);
 
   @override
-  State<RegistrationTextField> createState() => _RegistrationTextFieldState();
+  State<OTPTextField> createState() => _OTPTextFieldState();
 }
 
-class _RegistrationTextFieldState extends State<RegistrationTextField> {
+class _OTPTextFieldState extends State<OTPTextField> {
   final TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       controller: _controller,
-      onTap: () {
-        _controller.selection = TextSelection.fromPosition(
-            TextPosition(offset: _controller.text.length));
-        _controller.text == '' ? _controller.text = '+380 (' : _controller.text;
-      },
       textAlign: TextAlign.center,
       showCursor: true,
       inputFormatters: [
-        UAPhoneFormatter(),
-        LengthLimitingTextInputFormatter(19),
-        FilteringTextInputFormatter.allow(RegExp(r'[0-9 + ()]')),
+        LengthLimitingTextInputFormatter(6),
+        FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
       ],
       style: TextStyle(fontSize: 20, color: AppColors.blackText),
-      toolbarOptions: ToolbarOptions(paste: false),
+      toolbarOptions: ToolbarOptions(paste: true),
       decoration: InputDecoration(
         filled: true,
         fillColor: AppColors.background,
@@ -41,7 +34,6 @@ class _RegistrationTextFieldState extends State<RegistrationTextField> {
           horizontal: 0,
         ),
         labelStyle: TextStyle(fontSize: 20, color: AppColors.blackText),
-        labelText: '                                +380',
         floatingLabelBehavior: FloatingLabelBehavior.never,
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(45),
@@ -53,8 +45,10 @@ class _RegistrationTextFieldState extends State<RegistrationTextField> {
         ),
       ),
       onChanged: (value) {
-        BlocProvider.of<RegistrationBloc>(context)
-            .add(PhoneLength(phone: value));
+        if (value.length == 6) {
+          BlocProvider.of<RegistrationBloc>(context)
+              .add(TryCheckOTP(otp: value));
+        }
       },
       keyboardType: TextInputType.number,
       keyboardAppearance: Brightness.dark,

@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:audio_tales/pages/other/tabs_page.dart';
 import 'package:audio_tales/resources/colors.dart';
 import 'package:audio_tales/resources/images.dart';
 import 'package:audio_tales/widgets/containers/curved_container.dart';
@@ -11,6 +14,11 @@ class FinishedRegistrationPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Timer(Duration(seconds: 1), () {
+      Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (context) => TabsPage(selectedPage: 0)),
+          (Route<dynamic> route) => false);
+    });
     return Scaffold(
       body: Column(
         children: [

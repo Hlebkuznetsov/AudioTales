@@ -1,10 +1,11 @@
-import 'package:audio_tales/pages/auth/registration_page.dart';
+import 'package:audio_tales/blocs/registration/registration_bloc.dart';
 import 'package:audio_tales/pages/other/splash_screen_page.dart';
 import 'package:audio_tales/resources/colors.dart';
 import 'package:audio_tales/routes/navigator_keys.dart';
 import 'package:audio_tales/routes/routes.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,17 +18,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        scaffoldBackgroundColor: AppColors.background,
-        fontFamily: 'TTNorms',
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => RegistrationBloc(),
+        ),
+      ],
+      child: MaterialApp(
+        theme: ThemeData(
+          scaffoldBackgroundColor: AppColors.background,
+          fontFamily: 'TTNorms',
+        ),
+        home: SplashScreenPage(),
+        onGenerateRoute: AppRoutes.generateRoute,
+        debugShowCheckedModeBanner: false,
+        navigatorKey: NavigatorKeys.mainKey,
       ),
-      // home: TabsPage(selectedPage: 0),
-      // home: SplashScreenPage(),
-      home: RegistrationPage(),
-      onGenerateRoute: AppRoutes.generateRoute,
-      debugShowCheckedModeBanner: false,
-      navigatorKey: NavigatorKeys.mainKey,
     );
   }
 }
+
+
+
+//  splashscreen page get rid of getState ! 

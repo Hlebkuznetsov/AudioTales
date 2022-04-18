@@ -10,4 +10,5 @@ class NavigatorKeys {
   static GlobalKey<NavigatorState> fourTabKey = GlobalKey();
   static GlobalKey<NavigatorState> fiveTabKey = GlobalKey();
   static GlobalKey<ScaffoldState> tabsScaffoldKey = GlobalKey();
+  static GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
 }
