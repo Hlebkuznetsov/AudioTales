@@ -1,3 +1,4 @@
+import 'package:audio_tales/repositories/audio_repository.dart';
 import 'package:audio_tales/resources/colors.dart';
 import 'package:audio_tales/resources/icons.dart';
 import 'package:audio_tales/widgets/buttons/drawer_button.dart';
@@ -5,6 +6,7 @@ import 'package:audio_tales/pages/audio/recording_page.dart';
 import 'package:audio_tales/widgets/containers/curved_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class RecordPage extends StatelessWidget {
   RecordPage({Key? key}) : super(key: key);
@@ -60,15 +62,21 @@ class RecordPage extends StatelessWidget {
                         icon: SvgPicture.asset(
                           AppIcons.mic,
                         ),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            PageRouteBuilder(
-                              pageBuilder: (context, _, __) => RecordingPage(),
-                              transitionDuration: Duration.zero,
-                              reverseTransitionDuration: Duration.zero,
-                            ),
-                          );
+                        onPressed: () async {
+                          // final audio_repository = AudioRepository();
+                          // audio_repository.isAllowedRecording();
+                          final status = Permission.contacts.request();
+                          print(status);
+                          // await audio_repository.record();
+                          // Navigator.push(
+                          //   context,
+                          //   PageRouteBuilder(
+                          //     pageBuilder: (context, _, __) =>
+                          //         RecordingPage(),
+                          //     transitionDuration: Duration.zero,
+                          //     reverseTransitionDuration: Duration.zero,
+                          //   ),
+                          // );
                         },
                       ),
                     ),

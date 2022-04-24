@@ -81,6 +81,7 @@ class _TabsPageState extends State<TabsPage> {
                 ),
                 activeIcon: SvgPicture.asset(
                   AppIcons.mic,
+                  color: AppColors.orange,
                 ),
                 label: 'Запись',
               ),
